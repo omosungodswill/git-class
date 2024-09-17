@@ -1,2 +1,2 @@
-***** Sycamore Mentorship Program *****
-Bolu Git Classes 
+***** Sycamore Mentorship Program *****  ||
+Bolu's Git Classes 
