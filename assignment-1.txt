@@ -1,5 +1,0 @@
-*   Learnt how to initialize a repository by using git init
-*   learnt how to use git add to stage changes
-*   learnt how to use git commit to commit changes and add commit messages
-*   learnt how to use git log to access the logs for git 
-*   learnt how to push changes to a remote repository
