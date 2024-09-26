@@ -13,5 +13,7 @@ const fetchWeather = () => {
 
 
 fetchWeather().then((weatherInfo) => {
-	console.log(`City: ${weatherInfo.city}, Temperature: ${weatherInfo.temperature}, Forecast: ${weatherInfo.forecast}`);
+	console.log(`City: ${weatherInfo.city}, 
+                Temperature: ${weatherInfo.temperature}, 
+                Forecast: ${weatherInfo.forecast}`);
 });
