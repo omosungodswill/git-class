@@ -6,7 +6,7 @@ const fetchData = () => {
 };
 
 fetchData().then((file) => {
-    console.log(file); 
+    console.log(file)
     })
     .catch((error) => {
     console.log("Error:", error.message); 
