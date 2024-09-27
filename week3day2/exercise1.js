@@ -3,17 +3,13 @@
 // 2. Rewrite the fetchWeather() function using async/await .
 // 3. Handle errors by rejecting the promise when the city is not "Lagos" and using try...catch to catch the error.
 
-const fetchWeather = () => {
-	return new Promise((resolve)=> {
-			resolve({city: "Lagos", 
-            temperature: "80", 
-            forecast: "Light Rain with Thunder"});
+const fetchWeather = (state) => {
+	return new Promise((resolve, reject)=> {
+		if (state !== "lagos") {
+            reject("This is an invalid state")
+        }	
+        resolve("Cloudy");
 	});
 };
 
-
-fetchWeather().then((weatherInfo) => {
-	console.log(`City: ${weatherInfo.city}, 
-                Temperature: ${weatherInfo.temperature}, 
-                Forecast: ${weatherInfo.forecast}`);
-});
+ console.log(fetchWeather("lagos"))

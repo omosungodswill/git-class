@@ -1,13 +1,15 @@
-const fetchWeather = () => {
-	return new Promise((resolve)=> {
-        resolve({city: "Lagos", 
-        temperature: "80", 
-        forecast: "Light Rain with Thunder"});
-    });
+const fetchWeather = (state) => {
+	return new Promise((resolve, reject)=> {
+		setTimeout(() => {
+            resolve("Cloudy")  
+        }, 2000) 
+	})
 };
 
-async function getWeather() {
-	const weatherInfo = await fetchWeather();
-	console.log(`City: ${weatherInfo.city}, Temperature: ${weatherInfo.temperature}, Forecast: ${weatherInfo.forecast}`);
+const printWeather = async () => {
+    console.log("Fetch Weather Information")
+    const weather = await fetchWeather("Lagos")
+    console.log("The weather is " + weather)
 }
-getWeather();
+
+printWeather()
