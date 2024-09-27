@@ -8,7 +8,7 @@ const fetchData = () => {
 async function getData() { 
     try {
     const data = await fetchData();
-    console.log(data); 
+    console.log(data) 
         } 
     catch (error) {
     console.log("Error:", error.message);
