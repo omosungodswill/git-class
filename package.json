@@ -1,5 +1,10 @@
 {
+  "scripts":{
+    "start": "node week4day1/server.js",
+    "bolu": "nodemon week4day2/express.js"
+  },
   "dependencies": {
-    "express": "^4.21.0"
+    "express": "^4.21.0",
+    "nodemon": "^3.1.7"
   }
 }
