@@ -1,4 +1,4 @@
-// Create a basic Express server that:
+// 1. Create a basic Express server that:
 // ◦ Logs every incoming request using a custom logging middleware.
 // ◦ Uses express.json() to handle JSON request bodies.
 // ◦ Protects a specific route (e.g., /dashboard) with authentication middleware that checks for an authorization token.
