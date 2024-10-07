@@ -1,9 +1,17 @@
 {
-  "scripts":{
+  "name": "sycamore-assignments",
+  "version": "1.0.0",
+  "description": "Contains all Back-end Assignments for the Sycamore Mentorship program",
+  "main": "ExpressServerAssignment.js",
+  "scripts": {
     "start": "node week4day1/server.js",
-    "bolu": "nodemon week4day2/express.js"
+    "bolu": "nodemon week4day2/express.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "author": "Georgia",
+  "license": "ISC",
   "dependencies": {
+    "ejs": "^3.1.10",
     "express": "^4.21.0",
     "nodemon": "^3.1.7"
   }
