@@ -71,4 +71,4 @@ const deleteProduct = async(name) => {
 //addProduct()
 //getProduct()
 //updateProduct("Rubiks cube", 300)
-deleteProduct("Rubiks cube")
+//deleteProduct("Rubiks cube")
