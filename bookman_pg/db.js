@@ -1,7 +1,8 @@
 const {name} = require('ejs');
 const mongoose = require('mongoose');
-
-const connect = async () => {mongoose.connect("mongodb://localhost:27017/book_mgt")
+require("dotenv").config();
+const db_url=process.env.db_url
+const connect = async () => {mongoose.connect(db_url)
 .then(() => {
     console.log('Connected to MongoDB');
 })

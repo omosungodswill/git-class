@@ -1,5 +1,7 @@
 const express = require('express');
 const app = express();
+require("dotenv").config();
+const port=process.env.port
 const thing = require('./db')
 const connect = thing.connect
 const user = thing.User
@@ -9,9 +11,9 @@ app.use(express.json())
 app.set('view engine', 'ejs')
 
 
-app.listen(4000, () => {
+app.listen(port, () => {
     connect();
-    console.log("listening on 4000")
+    console.log(`listening on ${port}`)
 })
 
 app.get("/", (req, res) => {
