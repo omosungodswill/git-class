@@ -1,5 +1,6 @@
-const {name} = require('ejs');
+// const {name} = require('ejs');
 const mongoose = require('mongoose');
+const Joi = require('joi')
 require("dotenv").config();
 const db_url=process.env.db_url
 const connect = async () => {mongoose.connect(db_url)
@@ -16,6 +17,16 @@ const userSchema = new mongoose.Schema({
     password:   {type: String, required: true}
 }, {timestamps: true});
 
+
+function validateUser(user) {
+    const schema = Joi.object({
+        username: Joi.string().required(),
+        email: Joi.string().required(),
+        password: Joi.string().required()
+    })
+    return schema.validate(user)
+}
+
 const User = mongoose.model('User', userSchema)
 
-module.exports = {connect, User};
+module.exports = {connect, User, validateUser};

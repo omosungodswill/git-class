@@ -1,12 +1,13 @@
 const express = require('express');
 const app = express();
-const nodemailer = require('nodemailer');
 
-const thing = require('./db')
+const thing = require('./db');
+const registerRouter = require('./register');
 const connect = thing.connect
 const user = thing.User
+// const validate = thing.validateUser
 
-const registerRoute = require('./routes/register')
+
 require("dotenv").config();
 const port=process.env.port
 
@@ -40,17 +41,16 @@ app.post("/login", async(req, res) => {
 app.get("/register", (req, res) => {
     res.render('register')
 })
-
-app.post("/register", registerRoute)
+app.post("/register", registerRouter)
 // app.post("/register", async(req, res) => { 
-    // try{
-    //     const newUser = new user({ 
-    //         username: req.body.username,
-    //         email: req.body.email, 
-    //         password: req.body.password });
-    //     await newUser.save(); // Save to database
-    //     res.render("home")
-    // } catch(err){
-    //     console.error('failed to post', err)
-    // }
+//     try{
+//         const newUser = new user({ 
+//             username: req.body.username,
+//             email: req.body.email, 
+//             password: req.body.password });
+//         await newUser.save(); // Save to database
+//         res.render("home")
+//     } catch(err){
+//         console.error('failed to post', err)
+//     }
 // })
